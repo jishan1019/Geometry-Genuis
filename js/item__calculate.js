@@ -155,7 +155,7 @@ document.getElementById('btn-ellips').addEventListener('click', function(){
         alert('Please Provide Number')
         return
     }else{
-        const ellipsInputResult = (ellipsInput*0.5).toFixed(2);
+        const ellipsInputResult = (ellipsInput*3.1416).toFixed(2);
         const ellipsName = getCardItemName('ellips-titel');
 
         if(validaton <= 0){
