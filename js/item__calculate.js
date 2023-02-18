@@ -23,18 +23,24 @@ function appendElementTable(Pname,PResult){
     <td>${serial}</td>
     <td>${PResult}</td>
     <td>${Pname}</td>
-    <td> <button>Convert to m</button><sup>2</sup></td>
+    <td><button style="background-color: orange; padding:20px border; border-radius: 5px;color:white;">Convert to m</button><sup>2</sup></td>
     `;
     tableContainer.appendChild(tr);
 }
 
+function nullValidationChek(inputOneChek,inputTwoChek){
+    const elementOneVlid = document.getElementById(inputOneChek).value.length;
+    const elementTwoVlid = document.getElementById(inputTwoChek).value.length;
+
+    return (elementOneVlid+elementTwoVlid);
+}
 
 
 let serial = 0;
 
 document.getElementById('btn-triangle').addEventListener('click', function(){
+    const validaton = nullValidationChek('traingle-input-b','traingle-input-h')
     serial ++;
-
     const triangleInput = inputToNumber('traingle-input-b','traingle-input-h')
 
     if(triangleInput <= 0){
@@ -43,7 +49,14 @@ document.getElementById('btn-triangle').addEventListener('click', function(){
     }else{
         const traingleInputResult = (triangleInput*0.5).toFixed(2);
         const triangleName = getCardItemName('triangle-titel');
-        appendElementTable(traingleInputResult,triangleName);
+
+        if(validaton <= 0){
+            alert('Please Input Number')
+            return
+        }else{
+            appendElementTable(traingleInputResult,triangleName);
+        }
+        
     }
 
 })
