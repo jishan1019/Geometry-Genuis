@@ -35,8 +35,18 @@ function nullValidationChek(inputOneChek,inputTwoChek){
     return (elementOneVlid+elementTwoVlid);
 }
 
+function random_bg_color(elementIdHover) { 
+    var x = Math.floor(Math.random() * 256); var y = Math.floor(Math.random() * 256); var z = Math.floor(Math.random() * 256); var bgColor = "rgb(" + x + "," + y + "," + z + ")"; console.log(bgColor); document.getElementById(elementIdHover).style.background = bgColor;
+}
+
+
+
+document.getElementById('HoverColor').addEventListener('mouseenter',function(){
+    document.getElementById('HoverColor').style.backgroundColor = random_bg_color('HoverColor');
+})
 
 let serial = 0;
+
 
 document.getElementById('btn-triangle').addEventListener('click', function(){
     const validaton = nullValidationChek('traingle-input-b','traingle-input-h')
