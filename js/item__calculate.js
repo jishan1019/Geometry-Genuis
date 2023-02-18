@@ -61,3 +61,109 @@ document.getElementById('btn-triangle').addEventListener('click', function(){
 
 })
 
+document.getElementById('btn-ractangle').addEventListener('click', function(){
+    const validaton = nullValidationChek('ractangle-input-w','ractangle-input-l')
+    serial ++;
+    const RactangleInput = inputToNumber('ractangle-input-w','ractangle-input-l')
+
+    if(RactangleInput <= 0){
+        alert('Please Provide Number')
+        return
+    }else{
+        const ractangleInputResult = (RactangleInput).toFixed(2);
+        const RactanlgeName = getCardItemName('ractangle-titel');
+
+        if(validaton <= 0){
+            alert('Please Input Number')
+            return
+        }else{
+            appendElementTable(ractangleInputResult,RactanlgeName);
+        }
+    }
+})
+
+document.getElementById('btn-parallelogram').addEventListener('click', function(){
+    const validaton = nullValidationChek('parallelogram-input-b','parallelogram-input-h')
+    serial ++;
+    const parallelogramInput = inputToNumber('parallelogram-input-b','parallelogram-input-h')
+
+    if(parallelogramInput <= 0){
+        alert('Please Provide Number')
+        return
+    }else{
+        const parallelogramInputResult = (parallelogramInput).toFixed(2);
+        const parallelogramName = getCardItemName('parallelogram-titel');
+
+        if(validaton <= 0){
+            alert('Please Input Number')
+            return
+        }else{
+            appendElementTable(parallelogramInputResult,parallelogramName);
+        }
+    }
+})
+
+document.getElementById('btn-rombus').addEventListener('click', function(){
+    const validaton = nullValidationChek('rombus-input-d1','rombus-input-d2')
+    serial ++;
+    const RombusInput = inputToNumber('rombus-input-d1','rombus-input-d2')
+
+    if(RombusInput <= 0){
+        alert('Please Provide Number')
+        return
+    }else{
+        const rombusInputResult = (RombusInput*0.5).toFixed(2);
+        const rombusName = getCardItemName('rombus-titel');
+
+        if(validaton <= 0){
+            alert('Please Input Number')
+            return
+        }else{
+            appendElementTable(rombusInputResult,rombusName);
+        }
+    }
+})
+
+document.getElementById('btn-pentagon').addEventListener('click', function(){
+    const validaton = nullValidationChek('pentagon-input-p','pentagon-input-b')
+    serial ++;
+    const PentagonInput = inputToNumber('pentagon-input-p','pentagon-input-b')
+
+    if(PentagonInput <= 0){
+        alert('Please Provide Number')
+        return
+    }else{
+        const pentagonInputResult = (PentagonInput*0.5).toFixed(2);
+        const pentagonName = getCardItemName('pentagon-titel');
+
+        if(validaton <= 0){
+            alert('Please Input Number')
+            return
+        }else{
+            appendElementTable(pentagonInputResult,pentagonName);
+        }
+    }
+})
+
+
+document.getElementById('btn-ellips').addEventListener('click', function(){
+    const validaton = nullValidationChek('ellips-input-a','ellips-input-b')
+    serial ++;
+    const ellipsInput = inputToNumber('ellips-input-a','ellips-input-b')
+
+    if(ellipsInput <= 0){
+        alert('Please Provide Number')
+        return
+    }else{
+        const ellipsInputResult = (ellipsInput*0.5).toFixed(2);
+        const ellipsName = getCardItemName('ellips-titel');
+
+        if(validaton <= 0){
+            alert('Please Input Number')
+            return
+        }else{
+            appendElementTable(ellipsInputResult,ellipsName);
+        }
+    }
+})
+
